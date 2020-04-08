@@ -9,6 +9,7 @@ from ..utils.broadcasting import _matmul_broadcast_shape
 from ..utils.memoize import cached
 from .lazy_tensor import LazyTensor
 from .non_lazy_tensor import lazify
+from .triangular_lazy_tensor import TriangularLazyTensor
 
 
 def _prod(iterable):
@@ -58,6 +59,11 @@ class KroneckerProductLazyTensor(LazyTensor):
                 )
         super(KroneckerProductLazyTensor, self).__init__(*lazy_tensors)
         self.lazy_tensors = lazy_tensors
+
+    @cached(name="cholesky")
+    def _cholesky(self, upper=False):
+        chol = KroneckerProductLazyTensor(*[lt._cholesky(upper=upper) for lt in self.lazy_tensors])
+        return TriangularLazyTensor(chol, upper=upper)
 
     def _get_indices(self, row_index, col_index, *batch_indices):
         row_factor = self.size(-2)
