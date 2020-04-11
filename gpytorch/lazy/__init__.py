@@ -12,7 +12,7 @@ from .constant_mul_lazy_tensor import ConstantMulLazyTensor
 from .diag_lazy_tensor import DiagLazyTensor
 from .interpolated_lazy_tensor import InterpolatedLazyTensor
 from .keops_lazy_tensor import KeOpsLazyTensor
-from .kronecker_product_lazy_tensor import KroneckerProductLazyTensor
+from .kronecker_product_lazy_tensor import KroneckerProductLazyTensor, KroneckerProductTriangularLazyTensor
 from .lazy_evaluated_kernel_tensor import LazyEvaluatedKernelTensor
 from .lazy_tensor import LazyTensor, delazify
 from .matmul_lazy_tensor import MatmulLazyTensor
@@ -45,6 +45,7 @@ __all__ = [
     "InterpolatedLazyTensor",
     "KeOpsLazyTensor",
     "KroneckerProductLazyTensor",
+    "KroneckerProductTriangularLazyTensor",
     "MatmulLazyTensor",
     "MulLazyTensor",
     "NonLazyTensor",
