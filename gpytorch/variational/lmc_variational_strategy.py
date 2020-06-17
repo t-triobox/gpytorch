@@ -18,7 +18,7 @@ class LMCVariationalStrategy(_VariationalStrategy):
 
     .. math::
 
-        f_{\text{task } i}( \mathbf x) = \sum_{q=1}^Q \mathbf a^{(q)} g^{(q)} ( \mathbf x )
+        f_{\text{task } i}( \mathbf x) = \sum_{q=1}^Q a_i^{(q)} g^{(q)} ( \mathbf x )
 
     LMCVariationalStrategy wraps an existing :obj:`~gpytorch.variational.VariationalStrategy`
     to produce a :obj:`~gpytorch.variational.MultitaskMultivariateNormal` distribution.
@@ -33,7 +33,7 @@ class LMCVariationalStrategy(_VariationalStrategy):
         For example, if the base variational strategy has a batch shape of `[3]` (corresponding
         to 3 latent functions), the GP kernel object could have a batch shape of `[3]` or no
         batch shape. This would correspond to each of the latent functions having different kernels
-        or the same kernel, respecitvely.
+        or the same kernel, respectivly.
 
     :param ~gpytorch.variational.VariationalStrategy base_variational_strategy: Base variational strategy
     :param int num_tasks: The total number of tasks (output functions)
