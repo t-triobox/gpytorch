@@ -91,6 +91,12 @@ acts on a batch of approximate GPs.
 .. autoclass:: IndependentMultitaskVariationalStrategy
    :members:
 
+:hidden:`LMCVariationalStrategy`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: LMCVariationalStrategy
+   :members:
+
 
 Variational Distributions
 -----------------------------

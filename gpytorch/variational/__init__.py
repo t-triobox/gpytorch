@@ -10,6 +10,7 @@ from .independent_multitask_variational_strategy import (
     IndependentMultitaskVariationalStrategy,
     MultitaskVariationalStrategy,
 )
+from .lmc_variational_strategy import LMCVariationalStrategy
 from .mean_field_variational_distribution import MeanFieldVariationalDistribution
 from .orthogonally_decoupled_variational_strategy import OrthogonallyDecoupledVariationalStrategy
 from .unwhitened_variational_strategy import UnwhitenedVariationalStrategy
@@ -21,6 +22,7 @@ __all__ = [
     "AdditiveGridInterpolationVariationalStrategy",
     "GridInterpolationVariationalStrategy",
     "IndependentMultitaskVariationalStrategy",
+    "LMCVariationalStrategy",
     "MultitaskVariationalStrategy",
     "OrthogonallyDecoupledVariationalStrategy",
     "VariationalStrategy",
